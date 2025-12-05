@@ -1,0 +1,219 @@
+./start_backend.sh
+🚀 Starting JESECI Interactive Learning Platform - Backend Server
+[INFO] Current directory: /home/cavin/projects/Jeseci-Smart-Learning-Platform/backend
+[INFO] Loading environment variables...
+.env: line 96: Otieno: command not found
+.env: line 115: Otieno: command not found
+[INFO] Checking required environment variables...
+[WARNING] Some required environment variables are not set:
+[WARNING]   - DJANGO_SECRET_KEY
+[INFO] Please update your .env file with actual values
+[INFO] You can use .env.template as a reference
+[WARNING] Server will start, but API functionality may not work properly
+[INFO] Activating virtual environment...
+[SUCCESS] Virtual environment activated
+[INFO] Checking WebSocket dependencies...
+[WARNING] Daphne not installed. Installing for WebSocket support...
+Collecting daphne
+  Downloading daphne-4.2.1-py3-none-any.whl.metadata (1.7 kB)
+Collecting channels
+  Downloading channels-4.3.2-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: asgiref<4,>=3.5.2 in ./venv/lib/python3.12/site-packages (from daphne) (3.11.0)
+Collecting autobahn>=22.4.2 (from daphne)
+  Downloading autobahn-25.11.1-cp312-cp312-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl.metadata (30 kB)
+Collecting twisted>=22.4 (from twisted[tls]>=22.4->daphne)
+  Downloading twisted-25.5.0-py3-none-any.whl.metadata (22 kB)
+Requirement already satisfied: Django>=4.2 in ./venv/lib/python3.12/site-packages (from channels) (5.2.8)
+Collecting txaio>=25.9.2 (from autobahn>=22.4.2->daphne)
+  Downloading txaio-25.12.1-py3-none-any.whl.metadata (7.2 kB)
+Collecting cryptography>=3.4.6 (from autobahn>=22.4.2->daphne)
+  Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting hyperlink>=21.0.0 (from autobahn>=22.4.2->daphne)
+  Downloading hyperlink-21.0.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting msgpack>=1.0.2 (from autobahn>=22.4.2->daphne)
+  Downloading msgpack-1.1.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting ujson>=4.0.2 (from autobahn>=22.4.2->daphne)
+  Downloading ujson-5.11.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (9.4 kB)
+Collecting cbor2>=5.2.0 (from autobahn>=22.4.2->daphne)
+  Downloading cbor2-5.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+Collecting py-ubjson>=0.16.1 (from autobahn>=22.4.2->daphne)
+  Downloading py-ubjson-0.16.1.tar.gz (50 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting cffi>=2.0.0 (from cryptography>=3.4.6->autobahn>=22.4.2->daphne)
+  Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=3.4.6->autobahn>=22.4.2->daphne)
+  Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Requirement already satisfied: sqlparse>=0.3.1 in ./venv/lib/python3.12/site-packages (from Django>=4.2->channels) (0.5.4)
+Requirement already satisfied: idna>=2.5 in ./venv/lib/python3.12/site-packages (from hyperlink>=21.0.0->autobahn>=22.4.2->daphne) (3.11)
+Requirement already satisfied: attrs>=22.2.0 in ./venv/lib/python3.12/site-packages (from twisted>=22.4->twisted[tls]>=22.4->daphne) (25.4.0)
+Collecting automat>=24.8.0 (from twisted>=22.4->twisted[tls]>=22.4->daphne)
+  Downloading automat-25.4.16-py3-none-any.whl.metadata (8.4 kB)
+Collecting constantly>=15.1 (from twisted>=22.4->twisted[tls]>=22.4->daphne)
+  Downloading constantly-23.10.4-py3-none-any.whl.metadata (1.8 kB)
+Collecting incremental>=24.7.0 (from twisted>=22.4->twisted[tls]>=22.4->daphne)
+  Downloading incremental-24.11.0-py3-none-any.whl.metadata (9.5 kB)
+Requirement already satisfied: typing-extensions>=4.2.0 in ./venv/lib/python3.12/site-packages (from twisted>=22.4->twisted[tls]>=22.4->daphne) (4.15.0)
+Collecting zope-interface>=5 (from twisted>=22.4->twisted[tls]>=22.4->daphne)
+  Downloading zope_interface-8.1.1-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (45 kB)
+Requirement already satisfied: packaging>=17.0 in ./venv/lib/python3.12/site-packages (from incremental>=24.7.0->twisted>=22.4->twisted[tls]>=22.4->daphne) (25.0)
+Collecting pyopenssl>=21.0.0 (from twisted[tls]>=22.4->daphne)
+  Downloading pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+Collecting service-identity>=18.1.0 (from twisted[tls]>=22.4->daphne)
+  Downloading service_identity-24.2.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting pyasn1 (from service-identity>=18.1.0->twisted[tls]>=22.4->daphne)
+  Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting pyasn1-modules (from service-identity>=18.1.0->twisted[tls]>=22.4->daphne)
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Downloading daphne-4.2.1-py3-none-any.whl (29 kB)
+Downloading channels-4.3.2-py3-none-any.whl (31 kB)
+Downloading autobahn-25.11.1-cp312-cp312-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl (668 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 669.0/669.0 kB 1.0 MB/s  0:00:00
+Downloading cbor2-5.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (285 kB)
+Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 2.4 MB/s  0:00:01
+Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+Downloading msgpack-1.1.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (427 kB)
+Downloading twisted-25.5.0-py3-none-any.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 3.7 MB/s  0:00:00
+Downloading automat-25.4.16-py3-none-any.whl (42 kB)
+Downloading constantly-23.10.4-py3-none-any.whl (13 kB)
+Downloading incremental-24.11.0-py3-none-any.whl (21 kB)
+Downloading pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+Downloading service_identity-24.2.0-py3-none-any.whl (11 kB)
+Downloading txaio-25.12.1-py3-none-any.whl (31 kB)
+Downloading ujson-5.11.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (57 kB)
+Downloading zope_interface-8.1.1-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (264 kB)
+Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+Building wheels for collected packages: py-ubjson
+  Building wheel for py-ubjson (pyproject.toml) ... done
+  Created wheel for py-ubjson: filename=py_ubjson-0.16.1-cp312-cp312-linux_x86_64.whl size=19332 sha256=c8b1f446cf9c97ec82e3ded89a7f5f2e6fd9acd9a77ac5fb005a22cf23fd0204
+  Stored in directory: /home/cavin/.cache/pip/wheels/c0/a8/73/e1931c0c1125bc84ae955eeb3d8ba9fe23ecd95ee337095267
+Successfully built py-ubjson
+Installing collected packages: py-ubjson, zope-interface, ujson, txaio, pycparser, pyasn1, msgpack, incremental, hyperlink, constantly, cbor2, automat, twisted, pyasn1-modules, channels, cffi, cryptography, service-identity, pyopenssl, autobahn, daphne
+Successfully installed autobahn-25.11.1 automat-25.4.16 cbor2-5.7.1 cffi-2.0.0 channels-4.3.2 constantly-23.10.4 cryptography-46.0.3 daphne-4.2.1 hyperlink-21.0.0 incremental-24.11.0 msgpack-1.1.2 py-ubjson-0.16.1 pyasn1-0.6.1 pyasn1-modules-0.4.2 pycparser-2.23 pyopenssl-25.3.0 service-identity-24.2.0 twisted-25.5.0 txaio-25.12.1 ujson-5.11.0 zope-interface-8.1.1
+[SUCCESS] Daphne and Channels installed successfully
+[SUCCESS] WebSocket dependencies verified
+[INFO] Running database migrations...
+INFO JacManager initialized - using jaclang 0.9.x approach without root functions
+INFO Successfully loaded Jac module: orchestrator
+INFO Successfully loaded Jac module: content_curator
+INFO Successfully loaded Jac module: quiz_master
+INFO Successfully loaded Jac module: evaluator
+INFO Successfully loaded Jac module: progress_tracker
+INFO Successfully loaded Jac module: motivator
+INFO Health check: 6/6 walkers loaded
+INFO ✅ orchestrator - Loaded
+INFO ✅ content_curator - Loaded
+INFO ✅ quiz_master - Loaded
+INFO ✅ evaluator - Loaded
+INFO ✅ progress_tracker - Loaded
+INFO ✅ motivator - Loaded
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/cavin/projects/Jeseci-Smart-Learning-Platform/backend/static' in the STATICFILES_DIRS setting does not exist.
+Operations to perform:
+  Apply all migrations: admin, api, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+[SUCCESS] Database migrations completed
+[INFO] Collecting static files...
+INFO JacManager initialized - using jaclang 0.9.x approach without root functions
+INFO Successfully loaded Jac module: orchestrator
+INFO Successfully loaded Jac module: content_curator
+INFO Successfully loaded Jac module: quiz_master
+INFO Successfully loaded Jac module: evaluator
+INFO Successfully loaded Jac module: progress_tracker
+INFO Successfully loaded Jac module: motivator
+INFO Health check: 6/6 walkers loaded
+INFO ✅ orchestrator - Loaded
+INFO ✅ content_curator - Loaded
+INFO ✅ quiz_master - Loaded
+INFO ✅ evaluator - Loaded
+INFO ✅ progress_tracker - Loaded
+INFO ✅ motivator - Loaded
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/cavin/projects/Jeseci-Smart-Learning-Platform/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+163 static files copied to '/home/cavin/projects/Jeseci-Smart-Learning-Platform/backend/staticfiles'.
+[SUCCESS] Static files collected
+[INFO] =====================================
+[INFO] Backend Server Information:
+[INFO] =====================================
+[INFO] Backend API: http://localhost:8001
+[INFO] API Docs: http://localhost:8001/api/schema/
+[INFO] Admin Panel: http://localhost:8001/admin/
+[INFO] Health Check: http://localhost:8001/api/health/
+[INFO] WebSocket: ws://localhost:8001/ws/chat/
+[INFO] =====================================
+[SUCCESS] Starting Daphne ASGI server (with WebSocket support)...
+
+Press Ctrl+C to stop the server
+
+INFO JacManager initialized - using jaclang 0.9.x approach without root functions
+INFO Successfully loaded Jac module: orchestrator
+INFO Successfully loaded Jac module: content_curator
+INFO Successfully loaded Jac module: quiz_master
+INFO Successfully loaded Jac module: evaluator
+INFO Successfully loaded Jac module: progress_tracker
+INFO Successfully loaded Jac module: motivator
+INFO Health check: 6/6 walkers loaded
+INFO ✅ orchestrator - Loaded
+INFO ✅ content_curator - Loaded
+INFO ✅ quiz_master - Loaded
+INFO ✅ evaluator - Loaded
+INFO ✅ progress_tracker - Loaded
+INFO ✅ motivator - Loaded
+INFO Starting server at tcp:port=8001:interface=0.0.0.0
+INFO HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO Configuring endpoint tcp:port=8001:interface=0.0.0.0
+INFO Listening on TCP address 0.0.0.0:8001
+WARNING Not Found: /
+127.0.0.1:54276 - - [05/Dec/2025:20:40:10] "GET /" 404 2840
+WARNING Not Found: /favicon.ico
+127.0.0.1:54276 - - [05/Dec/2025:20:40:10] "GET /favicon.ico" 404 2891
+127.0.0.1:54276 - - [05/Dec/2025:20:40:15] "GET /admin" 301 -
+127.0.0.1:54276 - - [05/Dec/2025:20:40:15] "GET /admin/" 302 -
+127.0.0.1:54276 - - [05/Dec/2025:20:40:15] "GET /admin/login/?next=/admin/" 200 4173
+WARNING Not Found: /static/admin/css/base.css
+127.0.0.1:54276 - - [05/Dec/2025:20:40:15] "GET /static/admin/css/base.css" 404 2933
+WARNING Not Found: /static/admin/js/theme.js
+127.0.0.1:54288 - - [05/Dec/2025:20:40:15] "GET /static/admin/js/theme.js" 404 2930
+WARNING Not Found: /static/admin/css/dark_mode.css
+127.0.0.1:54280 - - [05/Dec/2025:20:40:15] "GET /static/admin/css/dark_mode.css" 404 2948
+WARNING Not Found: /static/admin/css/nav_sidebar.css
+127.0.0.1:54276 - - [05/Dec/2025:20:40:15] "GET /static/admin/css/nav_sidebar.css" 404 2954
+WARNING Not Found: /static/admin/css/login.css
+WARNING Not Found: /static/admin/css/responsive.css
+127.0.0.1:54288 - - [05/Dec/2025:20:40:15] "GET /static/admin/css/login.css" 404 2936
+127.0.0.1:54280 - - [05/Dec/2025:20:40:15] "GET /static/admin/css/responsive.css" 404 2951
+WARNING Not Found: /static/admin/js/nav_sidebar.js
+127.0.0.1:54276 - - [05/Dec/2025:20:40:15] "GET /static/admin/js/nav_sidebar.js" 404 2948
+127.0.0.1:54276 - - [05/Dec/2025:20:40:34] "POST /admin/login/?next=/admin/" 200 4341
+WARNING Not Found: /static/admin/css/base.css
+127.0.0.1:54276 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/base.css" 404 2933
+WARNING Not Found: /static/admin/js/theme.js
+127.0.0.1:54288 - - [05/Dec/2025:20:40:34] "GET /static/admin/js/theme.js" 404 2930
+WARNING Not Found: /static/admin/css/nav_sidebar.css
+127.0.0.1:54300 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/nav_sidebar.css" 404 2954
+WARNING Not Found: /static/admin/css/login.css
+WARNING Not Found: /static/admin/css/responsive.css
+127.0.0.1:54314 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/login.css" 404 2936
+WARNING Not Found: /static/admin/css/dark_mode.css
+127.0.0.1:54330 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/responsive.css" 404 2951
+127.0.0.1:54280 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/dark_mode.css" 404 2948
+WARNING Not Found: /static/admin/css/responsive.css
+127.0.0.1:54300 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/responsive.css" 404 2951
+WARNING Not Found: /static/admin/css/nav_sidebar.css
+127.0.0.1:54330 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/nav_sidebar.css" 404 2954
+WARNING Not Found: /static/admin/css/login.css
+WARNING Not Found: /static/admin/js/nav_sidebar.js
+127.0.0.1:54314 - - [05/Dec/2025:20:40:34] "GET /static/admin/css/login.css" 404 2936
+127.0.0.1:54280 - - [05/Dec/2025:20:40:34] "GET /static/admin/js/nav_sidebar.js" 404 2948
