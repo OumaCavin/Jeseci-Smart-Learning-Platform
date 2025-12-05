@@ -101,12 +101,12 @@ export class ErrorMonitoringService {
       category: options.category || this.categorizeError(error),
       severity: options.severity || this.determineSeverity(error, options.context),
       timestamp,
-      userId: options.userId,
-      sessionId: options.sessionId,
-      context: options.context,
-      stack,
-      componentStack: options.componentStack,
-      learningContext: options.learningContext,
+      ...(options.userId && { userId: options.userId }),
+      ...(options.sessionId && { sessionId: options.sessionId }),
+      ...(options.context && { context: options.context }),
+      ...(stack && { stack }),
+      ...(options.componentStack && { componentStack: options.componentStack }),
+      ...(options.learningContext && { learningContext: options.learningContext }),
       aiInsights: this.generateAIInsights(message, options.context)
     };
 
@@ -429,11 +429,12 @@ interface ErrorBoundaryProps {
 }
 
 export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  private errorMonitoring = new ErrorMonitoringService();
+  private errorMonitoring: ErrorMonitoringService;
 
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
+    this.errorMonitoring = new ErrorMonitoringService();
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
@@ -469,7 +470,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   }
 
   retry = () => {
-    this.setState({ hasError: false, error: undefined, errorReport: undefined });
+    this.setState(() => ({ hasError: false } as ErrorBoundaryState));
   };
 
   render() {
@@ -516,7 +517,7 @@ export function withErrorTracking<P extends object>(
     context?: Record<string, any>;
   } = {}
 ) {
-  const ErrorTrackedComponent: React.FC<P> = (props) => {
+  const ErrorTrackedComponent: React.FC<P> = (props: P) => {
     const errorMonitoring = new ErrorMonitoringService();
 
     React.useEffect(() => {
