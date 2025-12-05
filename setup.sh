@@ -150,6 +150,59 @@ fi
 # Navigate back to backend directory
 cd backend
 
+# =============================================================================
+# FIX 2.1: Frontend Environment Variables (COPY FROM .envJeseciSmartFrontend)
+# =============================================================================
+print_status "🔧 Step 2.1: Setting up frontend environment variables from .envJeseciSmartFrontend..."
+
+# Navigate to frontend directory
+cd ../frontend
+
+# Path to the frontend environment source file (one directory higher than project root)
+FRONTEND_ENV_SOURCE="../../.envJeseciSmartFrontend"
+
+# Copy .envJeseciSmartFrontend to frontend/.env
+if [ -f "$FRONTEND_ENV_SOURCE" ]; then
+    print_status "Found .envJeseciSmartFrontend, copying to frontend/.env..."
+    cp "$FRONTEND_ENV_SOURCE" ".env"
+    print_success "✅ Copied .envJeseciSmartFrontend to frontend/.env"
+    print_status "📝 Using frontend environment variables from .envJeseciSmartFrontend"
+else
+    print_warning "⚠️  .envJeseciSmartFrontend not found at $FRONTEND_ENV_SOURCE"
+    print_status "📝 Creating fallback frontend .env file..."
+    
+    # Create a fallback frontend .env file
+    cat > .env << 'EOF'
+# Frontend Environment Variables for JESECI Smart Learning Platform
+# Author: Cavin Otieno - cavin.otieno012@gmail.com
+
+# API Configuration
+VITE_API_BASE_URL=http://localhost:8001/api
+VITE_WS_BASE_URL=ws://localhost:8001
+
+# OpenAI Configuration
+VITE_OPENAI_API_KEY=your-openai-api-key-here
+
+# Gemini Configuration
+VITE_GEMINI_API_KEY=your-gemini-api-key-here
+
+# React App Configuration
+REACT_APP_OPENAI_API_KEY=your-openai-api-key-here
+REACT_APP_GEMINI_API_KEY=your-gemini-api-key-here
+
+# Development
+NODE_ENV=development
+GENERATE_SOURCEMAP=true
+
+# Other API Keys
+GOOGLE_API_KEY=your-google-api-key-here
+EOF
+    print_warning "⚠️  Created fallback frontend .env file - please update with your actual API keys"
+fi
+
+# Navigate back to backend directory for environment loading
+cd ../backend
+
 # FIXED: Load environment variables using proper method
 print_status "Loading environment variables (FIXED METHOD)..."
 set -a
@@ -165,7 +218,7 @@ echo "   EMAIL_HOST_USER: $EMAIL_HOST_USER"
 # =============================================================================
 # FIX 3: JaC Walker Syntax (FIXING root entry SYNTAX)
 # =============================================================================
-print_status "🎯 Step 3: Fixing JaC walker syntax (FIXING root entry ERRORS)..."
+print_status "🎯 Step 4: Fixing JaC walker syntax (FIXING root entry ERRORS)..."
 
 # Check if we're already in backend directory with jac_layer
 if [ -d "jac_layer/walkers" ]; then
@@ -198,7 +251,7 @@ fi
 # =============================================================================
 # FIX 4: Django Commands with Fixed Environment
 # =============================================================================
-print_status "🏗️  Step 4: Running Django commands with fixed dependencies..."
+print_status "🏗️  Step 5: Running Django commands with fixed dependencies..."
 
 # Set Python path for Django
 export PYTHONPATH="${PWD}:${PYTHONPATH}"
@@ -239,7 +292,7 @@ cd ..
 # =============================================================================
 # FIX 5: Frontend TypeScript Fixes
 # =============================================================================
-print_status "🎨 Step 5: Fixing frontend TypeScript compilation errors..."
+print_status "🎨 Step 6: Fixing frontend TypeScript compilation errors..."
 
 cd frontend
 
@@ -284,7 +337,7 @@ cd ..
 # =============================================================================
 # FINAL SETUP: Create Startup Scripts
 # =============================================================================
-print_status "📝 Step 6: Creating startup scripts..."
+print_status "📝 Step 7: Creating startup scripts..."
 
 # Make sure startup scripts are executable and properly configured
 chmod +x start_backend.sh start_celery.sh start_frontend.sh 2>/dev/null || true
@@ -294,7 +347,7 @@ print_success "✅ Startup scripts ready"
 # =============================================================================
 # FINAL VERIFICATION
 # =============================================================================
-print_status "🧪 Step 7: Final system verification..."
+print_status "🧪 Step 8: Final system verification..."
 
 # Test overall system
 python -c "
