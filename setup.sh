@@ -78,18 +78,27 @@ print_status "Verifying installation..."
 pip list | grep -E "(Django|djangorestframework|celery|redis|jaclang)" 2>/dev/null || print_warning "Some packages may need manual installation"
 
 # =============================================================================
-# FIX 2: Environment Variables (FIXING Otieno COMMAND ERRORS)
+# FIX 2: Environment Variables (COPY FROM .envJeseciBackend)
 # =============================================================================
-print_status "🔧 Step 2: Creating properly formatted .env file (FIXING PARSING ERRORS)..."
+print_status "🔧 Step 2: Setting up environment variables from .envJeseciBackend..."
 
-# Create .env file from .env.example template (already in backend directory)
-if [ -f ".env.example" ]; then
-    print_status "Creating .env file from .env.example template..."
-    cp .env.example .env
-    print_success "✅ Created .env file from .env.example template"
-    print_status "📝 Please edit backend/.env file manually to add your API keys and configuration"
+# Navigate to root directory to check for .envJeseciBackend
+cd ..
+BACKEND_ENV_SOURCE="../.envJeseciBackend"
+
+# Copy .envJeseciBackend to backend/.env
+if [ -f "$BACKEND_ENV_SOURCE" ]; then
+    print_status "Found .envJeseciBackend, copying to backend/.env..."
+    cp "$BACKEND_ENV_SOURCE" "backend/.env"
+    print_success "✅ Copied .envJeseciBackend to backend/.env"
+    print_status "📝 Using environment variables from .envJeseciBackend"
 else
-    print_warning "⚠️  .env.example not found, creating minimal .env file..."
+    print_error "❌ .envJeseciBackend not found at $BACKEND_ENV_SOURCE"
+    print_status "📝 Please ensure .envJeseciBackend exists in your projects directory"
+    print_status "📝 Creating backup .env file..."
+    
+    # Create a fallback .env file
+    cd backend
     cat > .env << 'EOF'
 # Environment Variables for JESECI Interactive Learning Platform
 # Author: Cavin Otieno - cavin.otieno012@gmail.com
@@ -134,8 +143,12 @@ DEVELOPMENT_MODE=True
 WEBSOCKET_PORT=8001
 API_PORT=8001
 EOF
-    print_success "✅ Created minimal .env file template"
+    print_warning "⚠️  Created fallback .env file - please update with your actual API keys"
+    cd ..
 fi
+
+# Navigate back to backend directory
+cd backend
 
 # FIXED: Load environment variables using proper method
 print_status "Loading environment variables (FIXED METHOD)..."
@@ -332,8 +345,9 @@ echo "  ./start_frontend.sh"
 echo ""
 echo "🔗 Access Points:"
 echo "• Frontend: http://localhost:3000"
-echo "• Backend API: http://localhost:8000/api/"
-echo "• Admin Panel: http://localhost:8000/admin/"
+echo "• Backend API: http://localhost:8001/api/"
+echo "• Admin Panel: http://localhost:8001/admin/"
+echo "• WebSocket: ws://localhost:8001/ws/chat/"
 echo ""
 echo "🔍 If you encounter any issues:"
 echo "• Check that Redis is running: sudo systemctl status redis"
