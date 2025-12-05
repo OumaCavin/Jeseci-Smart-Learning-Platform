@@ -77,8 +77,8 @@ pip install jaclang[all]==0.9.3
 print_status "Installing Python dependencies..."
 pip install -r requirements.txt 2>/dev/null || print_warning "requirements.txt not found, using Django packages only"
 
-# Install WebSocket support
-print_status "Installing WebSocket support (Daphne)..."
+# Install WebSocket support (Daphne ASGI server)
+print_status "Installing WebSocket support (Daphne ASGI server)..."
 pip install daphne channels
 
 # =============================================================================
@@ -220,13 +220,13 @@ case $choice in
         ./start_celery.sh
         ;;
     2)
-        print_status "Starting Django development server..."
-        python manage.py runserver 0.0.0.0:8000
+        print_status "Starting WebSocket-enabled Django server..."
+        ../start_backend.sh
         ;;
     3)
         print_status "Starting both services..."
-        print_status "Starting Django server in background..."
-        python manage.py runserver 0.0.0.0:8000 &
+        print_status "Starting WebSocket server in background..."
+        ../start_backend.sh &
         DJANGO_PID=$!
         sleep 3
         print_status "Starting Celery worker..."
@@ -246,5 +246,6 @@ echo ""
 echo "Next steps:"
 echo "- Check that all services started without errors"
 echo "- Visit http://localhost:3000 for frontend"
-echo "- Visit http://localhost:8000/api/ for backend API"
+echo "- Visit http://localhost:8001/api/ for backend API"
+echo "- WebSocket endpoint: ws://localhost:8001/ws/chat/"
 echo "- Monitor Celery worker logs for any JaC compilation warnings"
