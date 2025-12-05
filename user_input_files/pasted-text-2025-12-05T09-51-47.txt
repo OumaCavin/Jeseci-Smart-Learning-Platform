@@ -1,0 +1,80 @@
+0 verbose cli /home/cavin/.nvm/versions/node/v25.2.1/bin/node /home/cavin/.nvm/versions/node/v25.2.1/bin/npm
+1 info using npm@11.6.2
+2 info using node@v25.2.1
+3 silly config load:file:/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/cavin/projects/Jeseci-Smart-Learning-Platform/frontend/.npmrc
+5 silly config load:file:/home/cavin/.npmrc
+6 silly config load:file:/home/cavin/.nvm/versions/node/v25.2.1/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/home/cavin/.npm/_logs/2025-12-05T09_51_33_245Z-
+10 verbose logfile /home/cavin/.npm/_logs/2025-12-05T09_51_33_245Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest @types/react@^16.8 || ^17.0 || ^18.0
+16 silly packumentCache full:https://registry.npmjs.org/@types%2freact cache-miss
+17 http cache https://registry.npmjs.org/@types%2freact 657ms (cache hit)
+18 silly packumentCache full:https://registry.npmjs.org/@types%2freact set size:2541992 disposed:false
+19 silly fetch manifest @types/react-dom@^16.8 || ^17.0 || ^18.0
+20 silly packumentCache full:https://registry.npmjs.org/@types%2freact-dom cache-miss
+21 http cache https://registry.npmjs.org/@types%2freact-dom 47ms (cache hit)
+22 silly packumentCache full:https://registry.npmjs.org/@types%2freact-dom set size:429026 disposed:false
+23 verbose stack Error: could not resolve
+23 verbose stack     at PlaceDep.failPeerConflict (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:503:25)
+23 verbose stack     at new PlaceDep (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:157:21)
+23 verbose stack     at #buildDepStep (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:945:18)
+23 verbose stack     at async Arborist.buildIdealTree (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:182:7)
+23 verbose stack     at async Promise.all (index 1)
+23 verbose stack     at async Arborist.reify (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:114:5)
+23 verbose stack     at async Install.exec (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/lib/commands/install.js:150:5)
+23 verbose stack     at async Npm.exec (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/lib/npm.js:208:9)
+23 verbose stack     at async module.exports (/home/cavin/.nvm/versions/node/v25.2.1/lib/node_modules/npm/lib/cli/entry.js:67:5)
+24 error code ERESOLVE
+25 error ERESOLVE could not resolve
+26 error
+27 error While resolving: react-redux@8.1.3
+27 error Found: @types/react@19.2.7[2m[22m
+27 error [2mnode_modules/@types/react[22m
+27 error   [34mdev[39m @types/react@"^19.2.7" from the root project
+27 error   peerOptional @types/react@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0[2m[22m
+27 error   [2mnode_modules/@testing-library/react[22m
+27 error     @testing-library/react@"^16.3.0" from the root project
+27 error   2 more (@types/hoist-non-react-statics, @types/react-dom)
+27 error
+27 error Could not resolve dependency:
+27 error peerOptional @types/react@"^16.8 || ^17.0 || ^18.0" from react-redux@8.1.3[2m[22m
+27 error [2mnode_modules/react-redux[22m
+27 error   react-redux@"^8.1.3" from the root project
+27 error   peerOptional react-redux@"^7.2.1 || ^8.0.2" from @reduxjs/toolkit@1.9.7[2m[22m
+27 error   [2mnode_modules/@reduxjs/toolkit[22m
+27 error     @reduxjs/toolkit@"^1.9.7" from the root project
+27 error
+27 error Conflicting peer dependency: @types/react@18.3.27[2m[22m
+27 error [2mnode_modules/@types/react[22m
+27 error   peerOptional @types/react@"^16.8 || ^17.0 || ^18.0" from react-redux@8.1.3[2m[22m
+27 error   [2mnode_modules/react-redux[22m
+27 error     react-redux@"^8.1.3" from the root project
+27 error     peerOptional react-redux@"^7.2.1 || ^8.0.2" from @reduxjs/toolkit@1.9.7[2m[22m
+27 error     [2mnode_modules/@reduxjs/toolkit[22m
+27 error       @reduxjs/toolkit@"^1.9.7" from the root project
+27 error
+27 error Fix the upstream dependency conflict, or retry
+27 error this command with --force or --legacy-peer-deps
+27 error to accept an incorrect (and potentially broken) dependency resolution.
+28 error
+28 error
+28 error For a full report see:
+28 error /home/cavin/.npm/_logs/2025-12-05T09_51_33_245Z-eresolve-report.txt
+29 silly unfinished npm timer reify 1764928293615
+30 silly unfinished npm timer reify:loadTrees 1764928293629
+31 silly unfinished npm timer idealTree:buildDeps 1764928295019
+32 silly unfinished npm timer idealTree:node_modules/react-redux 1764928295033
+33 verbose cwd /home/cavin/projects/Jeseci-Smart-Learning-Platform/frontend
+34 verbose os Linux 6.6.87.2-microsoft-standard-WSL2
+35 verbose node v25.2.1
+36 verbose npm  v11.6.2
+37 verbose exit 1
+38 verbose code 1
+39 error A complete log of this run can be found in: /home/cavin/.npm/_logs/2025-12-05T09_51_33_245Z-debug-0.log
