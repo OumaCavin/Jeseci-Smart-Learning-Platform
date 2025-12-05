@@ -77,6 +77,10 @@ pip install jaclang[all]==0.9.3
 print_status "Installing Python dependencies..."
 pip install -r requirements.txt 2>/dev/null || print_warning "requirements.txt not found, using Django packages only"
 
+# Install WebSocket support
+print_status "Installing WebSocket support (Daphne)..."
+pip install daphne channels
+
 # =============================================================================
 # STEP 3: JaC Walker Compilation
 # =============================================================================

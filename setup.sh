@@ -70,7 +70,7 @@ if [ -f "requirements.txt" ]; then
     print_success "✅ All Python dependencies installed from requirements.txt"
 else
     print_warning "⚠️  requirements.txt not found, installing essential packages..."
-    pip install Django==5.2.8 djangorestframework django-cors-headers celery[redis] redis==7.1.0 jaclang==0.9.3
+    pip install Django==5.2.8 djangorestframework django-cors-headers celery[redis] redis==7.1.0 jaclang==0.9.3 daphne channels
 fi
 
 # Verify key packages
@@ -102,7 +102,7 @@ ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
 # Database Configuration
 DATABASE_URL=sqlite:///db.sqlite3
 
-# Redis Configuration
+# Redis Configuration (for Celery and Cache)
 REDIS_PASSWORD=redis_password
 REDIS_HOST=localhost
 REDIS_PORT=6379
@@ -116,6 +116,12 @@ OPENAI_API_KEY=your-openai-api-key-here
 GEMINI_API_KEY=your-gemini-api-key-here
 GOOGLE_API_KEY=your-google-api-key-here
 
+# WebSocket Configuration (for frontend)
+VITE_OPENAI_API_KEY=your-openai-api-key-here
+VITE_GEMINI_API_KEY=your-gemini-api-key-here
+REACT_APP_OPENAI_API_KEY=your-openai-api-key-here
+REACT_APP_GEMINI_API_KEY=your-gemini-api-key-here
+
 # Monitoring
 SENTRY_DSN=your-sentry-dsn-here
 GOOGLE_ANALYTICS_ID=your-ga-id-here
@@ -123,6 +129,10 @@ GOOGLE_ANALYTICS_ID=your-ga-id-here
 # Development
 ALLOW_SELF_REGISTRATION=True
 DEVELOPMENT_MODE=True
+
+# WebSocket Server Configuration
+WEBSOCKET_PORT=8001
+API_PORT=8001
 EOF
     print_success "✅ Created minimal .env file template"
 fi
