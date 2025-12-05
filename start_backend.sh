@@ -47,23 +47,32 @@ source .env
 
 # Check for required environment variables
 print_info "Checking required environment variables..."
-required_vars=("DJANGO_SECRET_KEY" "OPENAI_API_KEY" "GEMINI_API_KEY")
+required_vars=("SECRET_KEY" "DEBUG" "REDIS_PASSWORD")
 missing_vars=()
 
 for var in "${required_vars[@]}"; do
-    if [ -z "${!var}" ] || [[ "${!var}" == *"your-"* ]]; then
+    if [ -z "${!var}" ]; then
         missing_vars+=("$var")
     fi
 done
 
+# Optional API keys check
+optional_vars=("OPENAI_API_KEY" "GEMINI_API_KEY")
+for var in "${optional_vars[@]}"; do
+    if [ -z "${!var}" ] || [[ "${!var}" == *"your-"* ]]; then
+        print_warning "Optional API key not set: $var"
+    fi
+done
+
 if [ ${#missing_vars[@]} -ne 0 ]; then
-    print_warning "Some required environment variables are not set:"
+    print_error "Missing required environment variables:"
     for var in "${missing_vars[@]}"; do
-        print_warning "  - $var"
+        print_error "  - $var"
     done
-    print_info "Please update your .env file with actual values"
-    print_info "You can use .env.template as a reference"
-    print_warning "Server will start, but API functionality may not work properly"
+    print_error "Please ensure your .env file has all required variables"
+    print_error "Server will start but may not function properly"
+else
+    print_success "✅ All required environment variables are set"
 fi
 
 # Check virtual environment
