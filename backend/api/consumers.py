@@ -9,7 +9,12 @@ from django.contrib.auth.models import User
 
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
-        self.room_name = self.scope['url_route']['kwargs']['room_name']
+        # Get parameters from query string
+        query_string = self.scope['query_string'].decode()
+        params = dict(x.split('=') for x in query_string.split('&') if '=' in x)
+        
+        self.room_name = params.get('room', 'general')
+        self.user_id = params.get('user_id', 'anonymous')
         self.room_group_name = f'chat_{self.room_name}'
 
         # Join room group
@@ -57,7 +62,11 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
 class NotificationConsumer(AsyncWebsocketConsumer):
     async def connect(self):
-        self.user_id = self.scope['url_route']['kwargs']['user_id']
+        # Get parameters from query string
+        query_string = self.scope['query_string'].decode()
+        params = dict(x.split('=') for x in query_string.split('&') if '=' in x)
+        
+        self.user_id = params.get('user_id', 'anonymous')
         self.room_group_name = f'notifications_{self.user_id}'
 
         # Join room group

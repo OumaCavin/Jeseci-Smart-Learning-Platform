@@ -216,12 +216,9 @@ LOGGING = {
 # Channels ASGI application
 ASGI_APPLICATION = 'jeseci_platform.asgi.application'
 
-# Redis channel layer configuration for WebSocket support
+# In-memory channel layer configuration for WebSocket support (development only)
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [("127.0.0.1", 6379)],
-        },
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
     },
 }
