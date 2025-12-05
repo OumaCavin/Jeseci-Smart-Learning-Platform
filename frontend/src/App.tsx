@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Button } from './components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent } from './components/ui/Card';
 import { Input } from './components/ui/Input';
+import { Modal } from './components/ui/Modal';
+import ApiTestComponent from './components/test/ApiTestComponent';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showDashboard, setShowDashboard] = useState(false);
+  const [showApiTest, setShowApiTest] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,6 +73,14 @@ const App: React.FC = () => {
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-gray-700">Welcome back, User!</span>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={() => setShowApiTest(true)}
+                className="border-blue-300 text-blue-600 hover:bg-blue-50"
+              >
+                🧪 Test APIs
+              </Button>
               <Button variant="outline" size="sm" onClick={handleLogout}>
                 Logout
               </Button>
@@ -240,6 +251,17 @@ const App: React.FC = () => {
           </div>
         </div>
       </main>
+
+      {/* API Test Modal */}
+      {showApiTest && (
+        <Modal 
+          isOpen={showApiTest} 
+          onClose={() => setShowApiTest(false)}
+          title="API Services Test Panel"
+        >
+          <ApiTestComponent />
+        </Modal>
+      )}
     </div>
   );
 };
