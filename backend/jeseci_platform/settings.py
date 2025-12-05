@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # Third party apps - only basic ones we have installed
     'rest_framework',
     'drf_spectacular',
+    'channels',
     
     # Local apps
     'api',
@@ -208,6 +209,19 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': False,
+        },
+    },
+}
+
+# Channels ASGI application
+ASGI_APPLICATION = 'jeseci_platform.asgi.application'
+
+# Redis channel layer configuration for WebSocket support
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [("127.0.0.1", 6379)],
         },
     },
 }
