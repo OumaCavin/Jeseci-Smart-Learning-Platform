@@ -12,7 +12,7 @@ class WebSocketService {
   private token: string | null = null;
 
   constructor() {
-    this.baseUrl = process.env.REACT_APP_WS_URL || 'ws://localhost:8000/ws';
+    this.baseUrl = process.env.REACT_APP_WS_URL || 'ws://localhost:8001/ws';
     this.token = localStorage.getItem('access_token');
   }
 
