@@ -12,7 +12,8 @@ from drf_spectacular.views import (
     SpectacularRedocView,
     SpectacularSwaggerView
 )
-from django.http import JsonResponse, redirect
+from django.http import JsonResponse
+from django.shortcuts import redirect
 
 def api_root(request):
     """Root API endpoint that lists available endpoints"""
