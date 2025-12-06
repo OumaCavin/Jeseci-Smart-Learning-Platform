@@ -1,0 +1,1037 @@
+   1351 |     if (impact) {
+    1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+
+ERROR in src/utils/errorMonitoring.ts:1349:99
+TS1434: Unexpected keyword or identifier.
+    1347 |     const learningContext = errorReport as any.learningContext;
+    1348 |     
+  > 1349 |     let message = `🚨 ${errorReport as any.severity.toUpperCase()} ${errorReport as any.category} error detected`;
+         |                                                                                                   ^^^^^
+    1350 |     
+    1351 |     if (impact) {
+    1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+
+ERROR in src/utils/errorMonitoring.ts:1349:99
+TS2304: Cannot find name 'error'.
+    1347 |     const learningContext = errorReport as any.learningContext;
+    1348 |     
+  > 1349 |     let message = `🚨 ${errorReport as any.severity.toUpperCase()} ${errorReport as any.category} error detected`;
+         |                                                                                                   ^^^^^
+    1350 |     
+    1351 |     if (impact) {
+    1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+
+ERROR in src/utils/errorMonitoring.ts:1349:105
+TS2304: Cannot find name 'detected'.
+    1347 |     const learningContext = errorReport as any.learningContext;
+    1348 |     
+  > 1349 |     let message = `🚨 ${errorReport as any.severity.toUpperCase()} ${errorReport as any.category} error detected`;
+         |                                                                                                         ^^^^^^^^
+    1350 |     
+    1351 |     if (impact) {
+    1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+
+ERROR in src/utils/errorMonitoring.ts:1352:22
+TS2304: Cannot find name 'Impact'.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                      ^^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:28
+TS1005: ';' expected.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                            ^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:30
+TS1434: Unexpected keyword or identifier.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                              ^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:30
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                              ^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:32
+TS2304: Cannot find name 'impact'.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                ^^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:50
+TS2304: Cannot find name 'users'.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                  ^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:50
+TS2695: Left side of comma operator is unused and has no side effects.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                  ^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:57
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                         ^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:58
+TS1005: ';' expected.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                          ^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:59
+TS2304: Cannot find name 'impact'.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                           ^^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:82
+TS1434: Unexpected keyword or identifier.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                                                  ^^^^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:82
+TS2304: Cannot find name 'business'.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                                                  ^^^^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1352:91
+TS2304: Cannot find name 'impact'.
+    1350 |     
+    1351 |     if (impact) {
+  > 1352 |       message += ` | Impact: ${impact.userCount} users, ${impact.businessImpact} business impact`;
+         |                                                                                           ^^^^^^
+    1353 |     }
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+
+ERROR in src/utils/errorMonitoring.ts:1356:22
+TS2304: Cannot find name 'Learning'.
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+  > 1356 |       message += ` | Learning Risk: ${learningContext.learningOutcomeRisk}`;
+         |                      ^^^^^^^^
+    1357 |     }
+    1358 |     
+    1359 |     return message;
+
+ERROR in src/utils/errorMonitoring.ts:1356:31
+TS1005: ';' expected.
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+  > 1356 |       message += ` | Learning Risk: ${learningContext.learningOutcomeRisk}`;
+         |                               ^^^^
+    1357 |     }
+    1358 |     
+    1359 |     return message;
+
+ERROR in src/utils/errorMonitoring.ts:1356:37
+TS1434: Unexpected keyword or identifier.
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+  > 1356 |       message += ` | Learning Risk: ${learningContext.learningOutcomeRisk}`;
+         |                                     ^
+    1357 |     }
+    1358 |     
+    1359 |     return message;
+
+ERROR in src/utils/errorMonitoring.ts:1356:37
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+  > 1356 |       message += ` | Learning Risk: ${learningContext.learningOutcomeRisk}`;
+         |                                     ^
+    1357 |     }
+    1358 |     
+    1359 |     return message;
+
+ERROR in src/utils/errorMonitoring.ts:1356:39
+TS2304: Cannot find name 'learningContext'.
+    1354 |     
+    1355 |     if (learningContext && learningContext.learningOutcomeRisk !== 'low') {
+  > 1356 |       message += ` | Learning Risk: ${learningContext.learningOutcomeRisk}`;
+         |                                       ^^^^^^^^^^^^^^^
+    1357 |     }
+    1358 |     
+    1359 |     return message;
+
+ERROR in src/utils/errorMonitoring.ts:1444:20
+TS1005: ';' expected.
+    1442 |     
+    1443 |     errors.forEach(error => {
+  > 1444 |       const key = `${error.category}_${error.message}`;
+         |                    ^
+    1445 |       if (!groupedErrors.has(key)) {
+    1446 |         groupedErrors.set(key, []);
+    1447 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1444:20
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1442 |     
+    1443 |     errors.forEach(error => {
+  > 1444 |       const key = `${error.category}_${error.message}`;
+         |                    ^
+    1445 |       if (!groupedErrors.has(key)) {
+    1446 |         groupedErrors.set(key, []);
+    1447 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1444:22
+TS2304: Cannot find name 'error'.
+    1442 |     
+    1443 |     errors.forEach(error => {
+  > 1444 |       const key = `${error.category}_${error.message}`;
+         |                      ^^^^^
+    1445 |       if (!groupedErrors.has(key)) {
+    1446 |         groupedErrors.set(key, []);
+    1447 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1444:37
+TS1434: Unexpected keyword or identifier.
+    1442 |     
+    1443 |     errors.forEach(error => {
+  > 1444 |       const key = `${error.category}_${error.message}`;
+         |                                     ^^
+    1445 |       if (!groupedErrors.has(key)) {
+    1446 |         groupedErrors.set(key, []);
+    1447 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1444:37
+TS2304: Cannot find name '_$'.
+    1442 |     
+    1443 |     errors.forEach(error => {
+  > 1444 |       const key = `${error.category}_${error.message}`;
+         |                                     ^^
+    1445 |       if (!groupedErrors.has(key)) {
+    1446 |         groupedErrors.set(key, []);
+    1447 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1444:40
+TS2304: Cannot find name 'error'.
+    1442 |     
+    1443 |     errors.forEach(error => {
+  > 1444 |       const key = `${error.category}_${error.message}`;
+         |                                        ^^^^^
+    1445 |       if (!groupedErrors.has(key)) {
+    1446 |         groupedErrors.set(key, []);
+    1447 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1454:23
+TS1005: ';' expected.
+    1452 |       if (errorGroup.length > 2) {
+    1453 |         patterns.push({
+  > 1454 |           patternId: `pattern_${key}`,
+         |                       ^^^^^^^^^
+    1455 |           frequency: errorGroup.length,
+    1456 |           timeWindow: '30d',
+    1457 |           errorTypes: [errorGroup[0].category],
+
+ERROR in src/utils/errorMonitoring.ts:1454:23
+TS2304: Cannot find name 'pattern_$'.
+    1452 |       if (errorGroup.length > 2) {
+    1453 |         patterns.push({
+  > 1454 |           patternId: `pattern_${key}`,
+         |                       ^^^^^^^^^
+    1455 |           frequency: errorGroup.length,
+    1456 |           timeWindow: '30d',
+    1457 |           errorTypes: [errorGroup[0].category],
+
+ERROR in src/utils/errorMonitoring.ts:1454:33
+TS2304: Cannot find name 'key'.
+    1452 |       if (errorGroup.length > 2) {
+    1453 |         patterns.push({
+  > 1454 |           patternId: `pattern_${key}`,
+         |                                 ^^^
+    1455 |           frequency: errorGroup.length,
+    1456 |           timeWindow: '30d',
+    1457 |           errorTypes: [errorGroup[0].category],
+
+ERROR in src/utils/errorMonitoring.ts:1465:27
+TS1005: ';' expected.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                           ^^^^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:27
+TS2304: Cannot find name 'Recurring'.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                           ^^^^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:37
+TS1434: Unexpected keyword or identifier.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                     ^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:37
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                     ^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:39
+TS2304: Cannot find name 'errorGroup'.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                       ^^^^^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:63
+TS1434: Unexpected keyword or identifier.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                                               ^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:63
+TS2304: Cannot find name 'errors'.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                                               ^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:70
+TS1434: Unexpected keyword or identifier.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                                                      ^^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:70
+TS2304: Cannot find name 'pattern'.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                                                      ^^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:78
+TS2304: Cannot find name 'detected'.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                                                              ^^^^^^^^
+    1466 |           }
+    1467 |         });
+    1468 |       }
+
+ERROR in src/utils/errorMonitoring.ts:1465:86
+TS1443: Module declaration names may only use ' or " quoted strings.
+    1463 |             subCategory: 'recurring',
+    1464 |             priority: this.calculatePriority(errorGroup[0]) * errorGroup.length,
+  > 1465 |             description: `Recurring ${errorGroup[0].category} errors pattern detected`
+         |                                                                                      ^
+  > 1466 |           }
+         | ^^^^^^^^^^^
+  > 1467 |         });
+         | ^^^^^^^^^^^
+  > 1468 |       }
+         | ^^^^^^^^^^^
+  > 1469 |     });
+         | ^^^^^^^^^^^
+  > 1470 |     
+         | ^^^^^^^^^^^
+  > 1471 |     return patterns;
+         | ^^^^^^^^^^^
+  > 1472 |   }
+         | ^^^^^^^^^^^
+  > 1473 |
+         | ^^^^^^^^^^^
+  > 1474 |   private calculateUserImpact(errors: ErrorReport[]) {
+         | ^^^^^^^^^^^
+  > 1475 |     const usersAffected = new Set(errors.map(e => e.userId).filter(Boolean)).size;
+         | ^^^^^^^^^^^
+  > 1476 |     const sessionsImpacted = new Set(errors.map(e => e.sessionId).filter(Boolean)).size;
+         | ^^^^^^^^^^^
+  > 1477 |     const errorRate = errors.length / Math.max(usersAffected, 1);
+         | ^^^^^^^^^^^
+  > 1478 |     const recoveryRate = 0.85; // Simplified
+         | ^^^^^^^^^^^
+  > 1479 |     
+         | ^^^^^^^^^^^
+  > 1480 |     return {
+         | ^^^^^^^^^^^
+  > 1481 |       usersAffected,
+         | ^^^^^^^^^^^
+  > 1482 |       sessionsImpacted,
+         | ^^^^^^^^^^^
+  > 1483 |       errorRate: Math.round(errorRate * 100) / 100,
+         | ^^^^^^^^^^^
+  > 1484 |       recoveryRate
+         | ^^^^^^^^^^^
+  > 1485 |     };
+         | ^^^^^^^^^^^
+  > 1486 |   }
+         | ^^^^^^^^^^^
+  > 1487 |
+         | ^^^^^^^^^^^
+  > 1488 |   private calculateBusinessImpact(errors: ErrorReport[]) {
+         | ^^^^^^^^^^^
+  > 1489 |     // Simplified business impact calculation
+         | ^^^^^^^^^^^
+  > 1490 |     const criticalErrors = errors.filter(e => e.severity === 'critical').length;
+         | ^^^^^^^^^^^
+  > 1491 |     const revenueImpact = criticalErrors * 1000; // $1000 per critical error
+         | ^^^^^^^^^^^
+  > 1492 |     const productivityImpact = errors.length * 50; // 50 minutes per error
+         | ^^^^^^^^^^^
+  > 1493 |     const reputationImpact = criticalErrors * 5; // 5 points per critical error
+         | ^^^^^^^^^^^
+  > 1494 |     const complianceImpact = errors.filter(e => e.category === 'security').length * 10;
+         | ^^^^^^^^^^^
+  > 1495 |     
+         | ^^^^^^^^^^^
+  > 1496 |     return {
+         | ^^^^^^^^^^^
+  > 1497 |       revenue: -revenueImpact,
+         | ^^^^^^^^^^^
+  > 1498 |       productivity: -productivityImpact,
+         | ^^^^^^^^^^^
+  > 1499 |       reputation: -reputationImpact,
+         | ^^^^^^^^^^^
+  > 1500 |       compliance: -complianceImpact
+         | ^^^^^^^^^^^
+  > 1501 |     };
+         | ^^^^^^^^^^^
+  > 1502 |   }
+         | ^^^^^^^^^^^
+  > 1503 |
+         | ^^^^^^^^^^^
+  > 1504 |   private performComplianceCheck(type: string): ComplianceFinding[] {
+         | ^^^^^^^^^^^
+  > 1505 |     const findings: ComplianceFinding[] = [];
+         | ^^^^^^^^^^^
+  > 1506 |     
+         | ^^^^^^^^^^^
+  > 1507 |     // Simplified compliance checks
+         | ^^^^^^^^^^^
+  > 1508 |     if (type === 'gdpr') {
+         | ^^^^^^^^^^^
+  > 1509 |       // Check for PII in error logs
+         | ^^^^^^^^^^^
+  > 1510 |       const errorsWithPII = Array.from(this.errors.values()).filter(e => 
+         | ^^^^^^^^^^^
+  > 1511 |         this.containsPII(e.message) || this.containsPII(JSON.stringify(e.context))
+         | ^^^^^^^^^^^
+  > 1512 |       );
+         | ^^^^^^^^^^^
+  > 1513 |       
+         | ^^^^^^^^^^^
+  > 1514 |       if (errorsWithPII.length > 0) {
+         | ^^^^^^^^^^^
+  > 1515 |         findings.push({
+         | ^^^^^^^^^^^
+  > 1516 |           severity: 'medium',
+         | ^^^^^^^^^^^
+  > 1517 |           category: 'data_protection',
+         | ^^^^^^^^^^^
+  > 1518 |           description: 'Potential PII detected in error logs',
+         | ^^^^^^^^^^^
+  > 1519 |           regulation: 'GDPR Article 32',
+         | ^^^^^^^^^^^
+  > 1520 |           remediation: 'Implement PII anonymization in error logging'
+         | ^^^^^^^^^^^
+  > 1521 |         });
+         | ^^^^^^^^^^^
+  > 1522 |       }
+         | ^^^^^^^^^^^
+  > 1523 |     }
+         | ^^^^^^^^^^^
+  > 1524 |     
+         | ^^^^^^^^^^^
+  > 1525 |     return findings;
+         | ^^^^^^^^^^^
+  > 1526 |   }
+         | ^^^^^^^^^^^
+  > 1527 |
+         | ^^^^^^^^^^^
+  > 1528 |   private containsPII(text: string): boolean {
+         | ^^^^^^^^^^^
+  > 1529 |     // Simple PII detection patterns
+         | ^^^^^^^^^^^
+  > 1530 |     const piiPatterns = [
+         | ^^^^^^^^^^^
+  > 1531 |       /\b\d{3}-\d{2}-\d{4}\b/, // SSN
+         | ^^^^^^^^^^^
+  > 1532 |       /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/, // Email
+         | ^^^^^^^^^^^
+  > 1533 |       /\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/ // Credit card
+         | ^^^^^^^^^^^
+  > 1534 |     ];
+         | ^^^^^^^^^^^
+  > 1535 |     
+         | ^^^^^^^^^^^
+  > 1536 |     return piiPatterns.some(pattern => pattern.test(text));
+         | ^^^^^^^^^^^
+  > 1537 |   }
+         | ^^^^^^^^^^^
+  > 1538 |
+         | ^^^^^^^^^^^
+  > 1539 |   private generateAuditTrail(): AuditEntry[] {
+         | ^^^^^^^^^^^
+  > 1540 |     // Simplified audit trail
+         | ^^^^^^^^^^^
+  > 1541 |     return [{
+         | ^^^^^^^^^^^
+  > 1542 |       timestamp: new Date().toISOString(),
+         | ^^^^^^^^^^^
+  > 1543 |       userId: 'system',
+         | ^^^^^^^^^^^
+  > 1544 |       action: 'compliance_check',
+         | ^^^^^^^^^^^
+  > 1545 |       resource: 'error_monitoring',
+         | ^^^^^^^^^^^
+  > 1546 |       result: 'success',
+         | ^^^^^^^^^^^
+  > 1547 |       details: { reportType: 'automated' }
+         | ^^^^^^^^^^^
+  > 1548 |     }];
+         | ^^^^^^^^^^^
+  > 1549 |   }
+         | ^^^^^^^^^^^
+  > 1550 |
+         | ^^^^^^^^^^^
+  > 1551 |   private extractComponentName(componentStack: string): string {
+         | ^^^^^^^^^^^
+  > 1552 |     // Simplified component name extraction
+         | ^^^^^^^^^^^
+  > 1553 |     const match = componentStack.match(/at ([A-Za-z]+)/);
+         | ^^^^^^^^^^^
+  > 1554 |     return match ? match[1] : 'Unknown';
+         | ^^^^^^^^^^^
+  > 1555 |   }
+         | ^^^^^^^^^^^
+  > 1556 |
+         | ^^^^^^^^^^^
+  > 1557 |   private determineErrorPhase(componentStack: string): string {
+         | ^^^^^^^^^^^
+  > 1558 |     if (componentStack.includes('constructor')) return 'mounting';
+         | ^^^^^^^^^^^
+  > 1559 |     if (componentStack.includes('componentDid')) return 'updating';
+         | ^^^^^^^^^^^
+  > 1560 |     if (componentStack.includes('render')) return 'rendering';
+         | ^^^^^^^^^^^
+  > 1561 |     return 'unknown';
+         | ^^^^^^^^^^^
+  > 1562 |   }
+         | ^^^^^^^^^^^
+  > 1563 |
+         | ^^^^^^^^^^^
+  > 1564 |   private getApiErrorSeverity(response: Response): 'low' | 'medium' | 'high' | 'critical' {
+         | ^^^^^^^^^^^
+  > 1565 |     if (response.status >= 500) return 'critical';
+         | ^^^^^^^^^^^
+  > 1566 |     if (response.status >= 400) return 'high';
+         | ^^^^^^^^^^^
+  > 1567 |     if (response.status >= 300) return 'medium';
+         | ^^^^^^^^^^^
+  > 1568 |     return 'low';
+         | ^^^^^^^^^^^
+  > 1569 |   }
+         | ^^^^^^^^^^^
+  > 1570 |
+         | ^^^^^^^^^^^
+  > 1571 |   private logErrorToConsole(errorReport: any): void {
+         | ^^^^^^^^^^^
+  > 1572 |     console.group('🚨 Enterprise Error Intelligence Alert');
+         | ^^^^^^^^^^^
+  > 1573 |     console.error('Error ID:', errorReport as any.id);
+         | ^^^^^^^^^^^
+  > 1574 |     console.error('Message:', errorReport as any.message);
+         | ^^^^^^^^^^^
+  > 1575 |     console.error('Category:', errorReport as any.category);
+         | ^^^^^^^^^^^
+  > 1576 |     console.error('Severity:', errorReport as any.severity);
+         | ^^^^^^^^^^^
+  > 1577 |     console.error('Context:', errorReport as any.context);
+         | ^^^^^^^^^^^
+  > 1578 |     
+         | ^^^^^^^^^^^
+  > 1579 |     if (errorReport as any.aiInsights) {
+         | ^^^^^^^^^^^
+  > 1580 |       console.group('🧠 AI Insights');
+         | ^^^^^^^^^^^
+  > 1581 |       errorReport as any.aiInsights.forEach(insight => {
+         | ^^^^^^^^^^^
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         | ^^^^^^^^^^^^^^^^^^^^^^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:22
+TS1434: Unexpected keyword or identifier.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                      ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:22
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                      ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:24
+TS2304: Cannot find name 'insight'.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                        ^^^^^^^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:37
+TS1128: Declaration or statement expected.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                     ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:39
+TS1434: Unexpected keyword or identifier.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                       ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:39
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                       ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:41
+TS2304: Cannot find name 'insight'.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                         ^^^^^^^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:63
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                                               ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:64
+TS1005: ')' expected.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                                                ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:76
+TS2304: Cannot find name 'insight'.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                                                            ^^^^^^^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:102
+TS1109: Expression expected.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                                                                                      ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:104
+TS2304: Cannot find name 'confidence'.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                                                                                        ^^^^^^^^^^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1582:114
+TS1005: ';' expected.
+    1580 |       console.group('🧠 AI Insights');
+    1581 |       errorReport as any.aiInsights.forEach(insight => {
+  > 1582 |         console.log(`${insight.type}: ${insight.description} (${Math.round(insight.confidence * 100)}% confidence)`);
+         |                                                                                                                  ^
+    1583 |       });
+    1584 |       console.groupEnd();
+    1585 |     }
+
+ERROR in src/utils/errorMonitoring.ts:1612:31
+TS1005: ';' expected.
+    1610 |           headers: {
+    1611 |             'Content-Type': 'application/json',
+  > 1612 |             'Authorization': `Bearer ${process.env.REACT_APP_ERROR_REPORTING_TOKEN}`
+         |                               ^^^^^^
+    1613 |           },
+    1614 |           body: JSON.stringify(errorReport as any),
+    1615 |         });
+
+ERROR in src/utils/errorMonitoring.ts:1612:31
+TS2304: Cannot find name 'Bearer'.
+    1610 |           headers: {
+    1611 |             'Content-Type': 'application/json',
+  > 1612 |             'Authorization': `Bearer ${process.env.REACT_APP_ERROR_REPORTING_TOKEN}`
+         |                               ^^^^^^
+    1613 |           },
+    1614 |           body: JSON.stringify(errorReport as any),
+    1615 |         });
+
+ERROR in src/utils/errorMonitoring.ts:1612:38
+TS1434: Unexpected keyword or identifier.
+    1610 |           headers: {
+    1611 |             'Content-Type': 'application/json',
+  > 1612 |             'Authorization': `Bearer ${process.env.REACT_APP_ERROR_REPORTING_TOKEN}`
+         |                                      ^
+    1613 |           },
+    1614 |           body: JSON.stringify(errorReport as any),
+    1615 |         });
+
+ERROR in src/utils/errorMonitoring.ts:1612:38
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1610 |           headers: {
+    1611 |             'Content-Type': 'application/json',
+  > 1612 |             'Authorization': `Bearer ${process.env.REACT_APP_ERROR_REPORTING_TOKEN}`
+         |                                      ^
+    1613 |           },
+    1614 |           body: JSON.stringify(errorReport as any),
+    1615 |         });
+
+ERROR in src/utils/errorMonitoring.ts:1767:45
+TS1005: ';' expected.
+    1765 |           React.createElement('p', { className: 'text-sm text-red-800 font-mono' }, this.state.error.message),
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+  > 1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+         |                                             ^^^^^
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+
+ERROR in src/utils/errorMonitoring.ts:1767:55
+TS1434: Unexpected keyword or identifier.
+    1765 |           React.createElement('p', { className: 'text-sm text-red-800 font-mono' }, this.state.error.message),
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+  > 1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+         |                                                       ^
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+
+ERROR in src/utils/errorMonitoring.ts:1767:55
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1765 |           React.createElement('p', { className: 'text-sm text-red-800 font-mono' }, this.state.error.message),
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+  > 1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+         |                                                       ^
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+
+ERROR in src/utils/errorMonitoring.ts:1767:57
+TS2532: Object is possibly 'undefined'.
+    1765 |           React.createElement('p', { className: 'text-sm text-red-800 font-mono' }, this.state.error.message),
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+  > 1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+         |                                                         ^^^^
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+
+ERROR in src/utils/errorMonitoring.ts:1767:83
+TS2693: 'any' only refers to a type, but is being used as a value here.
+    1765 |           React.createElement('p', { className: 'text-sm text-red-800 font-mono' }, this.state.error.message),
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+  > 1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+         |                                                                                   ^^^
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+
+ERROR in src/utils/errorMonitoring.ts:1768:45
+TS1005: ';' expected.
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+  > 1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+         |                                             ^^^^^^^^
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+    1771 |         ),
+
+ERROR in src/utils/errorMonitoring.ts:1768:55
+TS1434: Unexpected keyword or identifier.
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+  > 1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+         |                                                       ^
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+    1771 |         ),
+
+ERROR in src/utils/errorMonitoring.ts:1768:55
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+  > 1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+         |                                                       ^
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+    1771 |         ),
+
+ERROR in src/utils/errorMonitoring.ts:1768:57
+TS2532: Object is possibly 'undefined'.
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+  > 1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+         |                                                         ^^^^
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+    1771 |         ),
+
+ERROR in src/utils/errorMonitoring.ts:1768:83
+TS2693: 'any' only refers to a type, but is being used as a value here.
+    1766 |           this.state.errorReport as any && React.createElement('div', { className: 'mt-2 text-xs text-gray-600' },
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+  > 1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+         |                                                                                   ^^^
+    1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+    1770 |           )
+    1771 |         ),
+
+ERROR in src/utils/errorMonitoring.ts:1769:45
+TS1005: ';' expected.
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+  > 1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+         |                                             ^^^^^^^^
+    1770 |           )
+    1771 |         ),
+    1772 |         React.createElement('div', { className: 'flex justify-center space-x-4' },
+
+ERROR in src/utils/errorMonitoring.ts:1769:55
+TS1434: Unexpected keyword or identifier.
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+  > 1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+         |                                                       ^
+    1770 |           )
+    1771 |         ),
+    1772 |         React.createElement('div', { className: 'flex justify-center space-x-4' },
+
+ERROR in src/utils/errorMonitoring.ts:1769:55
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+  > 1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+         |                                                       ^
+    1770 |           )
+    1771 |         ),
+    1772 |         React.createElement('div', { className: 'flex justify-center space-x-4' },
+
+ERROR in src/utils/errorMonitoring.ts:1769:57
+TS2532: Object is possibly 'undefined'.
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+  > 1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+         |                                                         ^^^^
+    1770 |           )
+    1771 |         ),
+    1772 |         React.createElement('div', { className: 'flex justify-center space-x-4' },
+
+ERROR in src/utils/errorMonitoring.ts:1769:83
+TS2693: 'any' only refers to a type, but is being used as a value here.
+    1767 |             React.createElement('p', null, `Error ID: ${this.state.errorReport as any.id}`),
+    1768 |             React.createElement('p', null, `Category: ${this.state.errorReport as any.category}`),
+  > 1769 |             React.createElement('p', null, `Severity: ${this.state.errorReport as any.severity}`)
+         |                                                                                   ^^^
+    1770 |           )
+    1771 |         ),
+    1772 |         React.createElement('div', { className: 'flex justify-center space-x-4' },
+
+ERROR in src/utils/errorMonitoring.ts:1815:40
+TS1005: ';' expected.
+    1813 |   };
+    1814 |
+  > 1815 |   ErrorTrackedComponent.displayName = `ErrorTracked(${WrappedComponent.displayName || WrappedComponent.name})`;
+         |                                        ^^^^^^^^^^^^
+    1816 |   
+    1817 |   return ErrorTrackedComponent;
+    1818 | }
+
+ERROR in src/utils/errorMonitoring.ts:1815:40
+TS2304: Cannot find name 'ErrorTracked'.
+    1813 |   };
+    1814 |
+  > 1815 |   ErrorTrackedComponent.displayName = `ErrorTracked(${WrappedComponent.displayName || WrappedComponent.name})`;
+         |                                        ^^^^^^^^^^^^
+    1816 |   
+    1817 |   return ErrorTrackedComponent;
+    1818 | }
+
+ERROR in src/utils/errorMonitoring.ts:1815:53
+TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+    1813 |   };
+    1814 |
+  > 1815 |   ErrorTrackedComponent.displayName = `ErrorTracked(${WrappedComponent.displayName || WrappedComponent.name})`;
+         |                                                     ^
+    1816 |   
+    1817 |   return ErrorTrackedComponent;
+    1818 | }
+
+ERROR in src/utils/errorMonitoring.ts:1815:54
+TS1005: ',' expected.
+    1813 |   };
+    1814 |
+  > 1815 |   ErrorTrackedComponent.displayName = `ErrorTracked(${WrappedComponent.displayName || WrappedComponent.name})`;
+         |                                                      ^
+    1816 |   
+    1817 |   return ErrorTrackedComponent;
+    1818 | }
+
+ERROR in src/utils/errorMonitoring.ts:1815:55
+TS18004: No value exists in scope for the shorthand property 'WrappedComponent'. Either declare one or provide an initializer.
+    1813 |   };
+    1814 |
+  > 1815 |   ErrorTrackedComponent.displayName = `ErrorTracked(${WrappedComponent.displayName || WrappedComponent.name})`;
+         |                                                       ^^^^^^^^^^^^^^^^
+    1816 |   
+    1817 |   return ErrorTrackedComponent;
+    1818 | }
+
+ERROR in src/utils/errorMonitoring.ts:1815:71
+TS1005: ',' expected.
+    1813 |   };
+    1814 |
+  > 1815 |   ErrorTrackedComponent.displayName = `ErrorTracked(${WrappedComponent.displayName || WrappedComponent.name})`;
+         |                                                                       ^
+    1816 |   
+    1817 |   return ErrorTrackedComponent;
+    1818 | }
+
+ERROR in src/utils/errorMonitoring.ts:1815:87
+TS2304: Cannot find name 'WrappedComponent'.
+    1813 |   };
+    1814 |
+  > 1815 |   ErrorTrackedComponent.displayName = `ErrorTracked(${WrappedComponent.displayName || WrappedComponent.name})`;
+         |                                                                                       ^^^^^^^^^^^^^^^^
+    1816 |   
+    1817 |   return ErrorTrackedComponent;
+    1818 | }
+
