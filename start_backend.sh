@@ -99,6 +99,16 @@ python -c "import daphne" 2>/dev/null || {
 
 print_success "WebSocket dependencies verified"
 
+# Check HTTP/2 support
+print_info "Checking HTTP/2 dependencies..."
+python -c "import twisted.web.http2" 2>/dev/null || {
+    print_warning "HTTP/2 support not installed. Installing Twisted extras..."
+    pip install 'Twisted[tls,http2]==24.11.0'
+    print_success "HTTP/2 support installed successfully"
+}
+
+print_success "HTTP/2 dependencies verified"
+
 # Run database migrations
 print_info "Running database migrations..."
 python manage.py migrate

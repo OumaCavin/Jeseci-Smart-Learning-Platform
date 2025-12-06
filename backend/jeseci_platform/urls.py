@@ -12,7 +12,7 @@ from drf_spectacular.views import (
     SpectacularRedocView,
     SpectacularSwaggerView
 )
-from django.http import JsonResponse
+from django.http import JsonResponse, redirect
 
 def api_root(request):
     """Root API endpoint that lists available endpoints"""
@@ -30,7 +30,14 @@ def api_root(request):
         }
     })
 
+def root_redirect(request):
+    """Redirect root path to API endpoint"""
+    return redirect('/api/')
+
 urlpatterns = [
+    # Root redirect
+    path('', root_redirect, name='root'),
+    
     # Root API endpoint
     path('api/', api_root, name='api_root'),
     
