@@ -1,0 +1,326 @@
+bash setup.sh 
+🚀 JESECI Interactive Learning Platform - Complete Setup with All Fixes
+======================================================================
+[INFO] 🔧 Starting comprehensive setup with all fixes...
+[INFO] 📦 Step 1: Installing Python dependencies (FIXING MISSING DEPENDENCIES)...
+[INFO] Navigating to backend directory...
+[SUCCESS] ✅ Virtual environment already active: /home/cavin/projects/Jeseci-Smart-Learning-Platform/backend/venv
+[INFO] Upgrading pip...
+Requirement already satisfied: pip in ./venv/lib/python3.12/site-packages (25.3)
+[INFO] Installing Python dependencies from requirements.txt...
+Requirement already satisfied: jaclang==0.9.3 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 5)) (0.9.3)
+Requirement already satisfied: Django==5.2.8 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 8)) (5.2.8)
+Requirement already satisfied: djangorestframework in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 9)) (3.16.1)
+Requirement already satisfied: django-cors-headers in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 10)) (4.9.0)
+Requirement already satisfied: psycopg2-binary==2.9.11 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 13)) (2.9.11)
+Requirement already satisfied: redis==7.1.0 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 14)) (7.1.0)
+Requirement already satisfied: django-redis==6.0.0 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 15)) (6.0.0)
+Requirement already satisfied: python-decouple==3.8 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 21)) (3.8)
+Requirement already satisfied: dj-database-url in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 22)) (3.0.1)
+Requirement already satisfied: Pillow==12.0.0 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 25)) (12.0.0)
+Requirement already satisfied: django-storages in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 26)) (1.14.6)
+Requirement already satisfied: django-debug-toolbar in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 29)) (6.1.0)
+Requirement already satisfied: django-extensions in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 30)) (4.1)
+Requirement already satisfied: pytest==9.0.1 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 31)) (9.0.1)
+Requirement already satisfied: pytest-django==4.11.1 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 32)) (4.11.1)
+Requirement already satisfied: pytest-cov==7.0.0 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 33)) (7.0.0)
+Requirement already satisfied: sphinx in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 36)) (8.2.3)
+Requirement already satisfied: sphinx-rtd-theme==3.0.2 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 37)) (3.0.2)
+Requirement already satisfied: django-security in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 40)) (0.9.10)
+Requirement already satisfied: psutil==6.1.1 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 43)) (6.1.1)
+Requirement already satisfied: drf-spectacular==0.29.0 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 46)) (0.29.0)
+Requirement already satisfied: djangorestframework-simplejwt==5.3.0 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 49)) (5.3.0)
+Requirement already satisfied: channels==4.1.0 in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 52)) (4.1.0)
+Collecting daphne==4.0.0 (from -r requirements.txt (line 53))
+  Downloading daphne-4.0.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting Twisted==24.11.0 (from Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading twisted-24.11.0-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: celery[redis] in ./venv/lib/python3.12/site-packages (from -r requirements.txt (line 18)) (5.3.1)
+Requirement already satisfied: asgiref>=3.8.1 in ./venv/lib/python3.12/site-packages (from Django==5.2.8->-r requirements.txt (line 8)) (3.11.0)
+Requirement already satisfied: sqlparse>=0.3.1 in ./venv/lib/python3.12/site-packages (from Django==5.2.8->-r requirements.txt (line 8)) (0.5.4)
+Requirement already satisfied: iniconfig>=1.0.1 in ./venv/lib/python3.12/site-packages (from pytest==9.0.1->-r requirements.txt (line 31)) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./venv/lib/python3.12/site-packages (from pytest==9.0.1->-r requirements.txt (line 31)) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./venv/lib/python3.12/site-packages (from pytest==9.0.1->-r requirements.txt (line 31)) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./venv/lib/python3.12/site-packages (from pytest==9.0.1->-r requirements.txt (line 31)) (2.19.2)
+Requirement already satisfied: coverage>=7.10.6 in ./venv/lib/python3.12/site-packages (from coverage[toml]>=7.10.6->pytest-cov==7.0.0->-r requirements.txt (line 33)) (7.12.0)
+Requirement already satisfied: docutils<0.22,>0.18 in ./venv/lib/python3.12/site-packages (from sphinx-rtd-theme==3.0.2->-r requirements.txt (line 37)) (0.21.2)
+Requirement already satisfied: sphinxcontrib-jquery<5,>=4 in ./venv/lib/python3.12/site-packages (from sphinx-rtd-theme==3.0.2->-r requirements.txt (line 37)) (4.1)
+Requirement already satisfied: uritemplate>=2.0.0 in ./venv/lib/python3.12/site-packages (from drf-spectacular==0.29.0->-r requirements.txt (line 46)) (4.2.0)
+Requirement already satisfied: PyYAML>=5.1 in ./venv/lib/python3.12/site-packages (from drf-spectacular==0.29.0->-r requirements.txt (line 46)) (6.0.3)
+Requirement already satisfied: jsonschema>=2.6.0 in ./venv/lib/python3.12/site-packages (from drf-spectacular==0.29.0->-r requirements.txt (line 46)) (4.25.1)
+Requirement already satisfied: inflection>=0.3.1 in ./venv/lib/python3.12/site-packages (from drf-spectacular==0.29.0->-r requirements.txt (line 46)) (0.5.1)
+Requirement already satisfied: pyjwt<3,>=1.7.1 in ./venv/lib/python3.12/site-packages (from djangorestframework-simplejwt==5.3.0->-r requirements.txt (line 49)) (2.10.1)
+Collecting autobahn>=22.4.2 (from daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading autobahn-25.11.1-cp312-cp312-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl.metadata (30 kB)
+Requirement already satisfied: attrs>=22.2.0 in ./venv/lib/python3.12/site-packages (from Twisted==24.11.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54)) (25.4.0)
+Collecting automat>=24.8.0 (from Twisted==24.11.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading automat-25.4.16-py3-none-any.whl.metadata (8.4 kB)
+Collecting constantly>=15.1 (from Twisted==24.11.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading constantly-23.10.4-py3-none-any.whl.metadata (1.8 kB)
+Collecting hyperlink>=17.1.1 (from Twisted==24.11.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading hyperlink-21.0.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting incremental>=24.7.0 (from Twisted==24.11.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading incremental-24.11.0-py3-none-any.whl.metadata (9.5 kB)
+Requirement already satisfied: typing-extensions>=4.2.0 in ./venv/lib/python3.12/site-packages (from Twisted==24.11.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54)) (4.15.0)
+Collecting zope-interface>=5 (from Twisted==24.11.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading zope_interface-8.1.1-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (45 kB)
+Collecting h2<5.0,>=3.2 (from Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading h2-4.3.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting priority<2.0,>=1.1.0 (from Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading priority-1.3.0-py2.py3-none-any.whl.metadata (7.5 kB)
+Requirement already satisfied: idna>=2.4 in ./venv/lib/python3.12/site-packages (from Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54)) (3.11)
+Collecting pyopenssl>=21.0.0 (from Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+Collecting service-identity>=18.1.0 (from Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading service_identity-24.2.0-py3-none-any.whl.metadata (5.1 kB)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (3.1.6)
+Requirement already satisfied: snowballstemmer>=2.2 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (3.0.1)
+Requirement already satisfied: babel>=2.13 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (2.17.0)
+Requirement already satisfied: alabaster>=0.7.14 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (1.4.1)
+Requirement already satisfied: requests>=2.30.0 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (2.32.5)
+Requirement already satisfied: roman-numerals-py>=1.0.0 in ./venv/lib/python3.12/site-packages (from sphinx->-r requirements.txt (line 36)) (3.1.0)
+Collecting hyperframe<7,>=6.1 (from h2<5.0,>=3.2->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting hpack<5,>=4.1 (from h2<5.0,>=3.2->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading hpack-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: billiard<5.0,>=4.1.0 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (4.2.4)
+Requirement already satisfied: click-didyoumean>=0.3.0 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (0.3.1)
+Requirement already satisfied: click-plugins>=1.1.1 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (1.1.1.2)
+Requirement already satisfied: click-repl>=0.2.0 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (0.3.0)
+Requirement already satisfied: click<9.0,>=8.1.2 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (8.3.1)
+Requirement already satisfied: kombu<6.0,>=5.3.1 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (5.6.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (2.9.0.post0)
+Requirement already satisfied: tzdata>=2022.7 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (2025.2)
+Requirement already satisfied: vine<6.0,>=5.0.0 in ./venv/lib/python3.12/site-packages (from celery[redis]->-r requirements.txt (line 18)) (5.1.0)
+Requirement already satisfied: amqp<6.0.0,>=5.1.1 in ./venv/lib/python3.12/site-packages (from kombu<6.0,>=5.3.1->celery[redis]->-r requirements.txt (line 18)) (5.3.1)
+Requirement already satisfied: ua_parser>=0.7.1 in ./venv/lib/python3.12/site-packages (from django-security->-r requirements.txt (line 40)) (1.0.1)
+Collecting txaio>=25.9.2 (from autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading txaio-25.12.1-py3-none-any.whl.metadata (7.2 kB)
+Collecting cryptography>=3.4.6 (from autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Requirement already satisfied: msgpack>=1.0.2 in ./venv/lib/python3.12/site-packages (from autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53)) (1.1.2)
+Collecting ujson>=4.0.2 (from autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading ujson-5.11.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (9.4 kB)
+Collecting cbor2>=5.2.0 (from autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading cbor2-5.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+Collecting py-ubjson>=0.16.1 (from autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading py-ubjson-0.16.1.tar.gz (50 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: prompt-toolkit>=3.0.36 in ./venv/lib/python3.12/site-packages (from click-repl>=0.2.0->celery[redis]->-r requirements.txt (line 18)) (3.0.52)
+Collecting cffi>=2.0.0 (from cryptography>=3.4.6->autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=3.4.6->autobahn>=22.4.2->daphne==4.0.0->-r requirements.txt (line 53))
+  Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Requirement already satisfied: MarkupSafe>=2.0 in ./venv/lib/python3.12/site-packages (from Jinja2>=3.1->sphinx->-r requirements.txt (line 36)) (3.0.3)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./venv/lib/python3.12/site-packages (from jsonschema>=2.6.0->drf-spectacular==0.29.0->-r requirements.txt (line 46)) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./venv/lib/python3.12/site-packages (from jsonschema>=2.6.0->drf-spectacular==0.29.0->-r requirements.txt (line 46)) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in ./venv/lib/python3.12/site-packages (from jsonschema>=2.6.0->drf-spectacular==0.29.0->-r requirements.txt (line 46)) (0.30.0)
+Requirement already satisfied: wcwidth in ./venv/lib/python3.12/site-packages (from prompt-toolkit>=3.0.36->click-repl>=0.2.0->celery[redis]->-r requirements.txt (line 18)) (0.2.14)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.12/site-packages (from python-dateutil>=2.8.2->celery[redis]->-r requirements.txt (line 18)) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./venv/lib/python3.12/site-packages (from requests>=2.30.0->sphinx->-r requirements.txt (line 36)) (3.4.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./venv/lib/python3.12/site-packages (from requests>=2.30.0->sphinx->-r requirements.txt (line 36)) (2.6.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./venv/lib/python3.12/site-packages (from requests>=2.30.0->sphinx->-r requirements.txt (line 36)) (2025.11.12)
+Collecting pyasn1 (from service-identity>=18.1.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting pyasn1-modules (from service-identity>=18.1.0->Twisted[http2,tls]==24.11.0->-r requirements.txt (line 54))
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: ua-parser-builtins in ./venv/lib/python3.12/site-packages (from ua_parser>=0.7.1->django-security->-r requirements.txt (line 40)) (0.18.0.post1)
+Downloading daphne-4.0.0-py3-none-any.whl (30 kB)
+Downloading twisted-24.11.0-py3-none-any.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 1.1 MB/s  0:00:02
+Downloading h2-4.3.0-py3-none-any.whl (61 kB)
+Downloading hpack-4.1.0-py3-none-any.whl (34 kB)
+Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+Downloading priority-1.3.0-py2.py3-none-any.whl (11 kB)
+Downloading autobahn-25.11.1-cp312-cp312-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl (668 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 669.0/669.0 kB 1.9 MB/s  0:00:00
+Downloading automat-25.4.16-py3-none-any.whl (42 kB)
+Downloading cbor2-5.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (285 kB)
+Downloading constantly-23.10.4-py3-none-any.whl (13 kB)
+Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 2.7 MB/s  0:00:01
+Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+Downloading incremental-24.11.0-py3-none-any.whl (21 kB)
+Downloading pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+Downloading service_identity-24.2.0-py3-none-any.whl (11 kB)
+Downloading txaio-25.12.1-py3-none-any.whl (31 kB)
+Downloading ujson-5.11.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (57 kB)
+Downloading zope_interface-8.1.1-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (264 kB)
+Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+Building wheels for collected packages: py-ubjson
+  Building wheel for py-ubjson (pyproject.toml) ... done
+  Created wheel for py-ubjson: filename=py_ubjson-0.16.1-cp312-cp312-linux_x86_64.whl size=19332 sha256=db5b3922f1e5af437f15df0404773718056ab3be906f99bf92d26e475ccecf32
+  Stored in directory: /home/cavin/.cache/pip/wheels/c0/a8/73/e1931c0c1125bc84ae955eeb3d8ba9fe23ecd95ee337095267
+Successfully built py-ubjson
+Installing collected packages: py-ubjson, priority, zope-interface, ujson, txaio, pycparser, pyasn1, incremental, hyperlink, hyperframe, hpack, constantly, cbor2, automat, Twisted, pyasn1-modules, h2, cffi, cryptography, service-identity, pyopenssl, autobahn, daphne
+Successfully installed Twisted-24.11.0 autobahn-25.11.1 automat-25.4.16 cbor2-5.7.1 cffi-2.0.0 constantly-23.10.4 cryptography-46.0.3 daphne-4.0.0 h2-4.3.0 hpack-4.1.0 hyperframe-6.1.0 hyperlink-21.0.0 incremental-24.11.0 priority-1.3.0 py-ubjson-0.16.1 pyasn1-0.6.1 pyasn1-modules-0.4.2 pycparser-2.23 pyopenssl-25.3.0 service-identity-24.2.0 txaio-25.12.1 ujson-5.11.0 zope-interface-8.1.1
+[SUCCESS] ✅ All Python dependencies installed from requirements.txt
+[INFO] Verifying installation...
+celery                        5.3.1
+channels-redis                4.2.0
+Django                        5.2.8
+django-redis                  6.0.0
+djangorestframework           3.16.1
+djangorestframework-simplejwt 5.3.0
+jaclang                       0.9.3
+redis                         7.1.0
+[INFO] 🔧 Step 2: Setting up environment variables from .envJeseciBackend...
+[INFO] Found .envJeseciBackend, copying to backend/.env...
+[SUCCESS] ✅ Copied .envJeseciBackend to backend/.env
+[INFO] 📝 Using environment variables from .envJeseciBackend
+[INFO] 🔧 Step 2.1: Setting up frontend environment variables from .envJeseciSmartFrontend...
+[INFO] Found .envJeseciSmartFrontend, copying to frontend/.env...
+[SUCCESS] ✅ Copied .envJeseciSmartFrontend to frontend/.env
+[INFO] 📝 Using frontend environment variables from .envJeseciSmartFrontend
+[INFO] Loading environment variables (FIXED METHOD)...
+[SUCCESS] ✅ Environment variables loaded successfully
+[INFO] Testing environment variables:
+   DEBUG: True
+   REDIS_PASSWORD: redis_password
+   EMAIL_HOST_USER: cavin.otieno012@gmail.com
+[INFO] 🎯 Step 4: Fixing JaC walker syntax (FIXING root entry ERRORS)...
+[INFO] Found JaC walker directory, fixing syntax...
+[INFO] 📝 Fixing syntax in content_curator.jac...
+[WARNING] ⚠️  Could not verify fix for content_curator.jac
+[INFO] 📝 Fixing syntax in evaluator.jac...
+[WARNING] ⚠️  Could not verify fix for evaluator.jac
+[INFO] 📝 Fixing syntax in motivator.jac...
+[WARNING] ⚠️  Could not verify fix for motivator.jac
+[INFO] 📝 Fixing syntax in orchestrator.jac...
+[WARNING] ⚠️  Could not verify fix for orchestrator.jac
+[INFO] 📝 Fixing syntax in progress_tracker.jac...
+[WARNING] ⚠️  Could not verify fix for progress_tracker.jac
+[INFO] 📝 Fixing syntax in quiz_master.jac...
+[WARNING] ⚠️  Could not verify fix for quiz_master.jac
+[SUCCESS] ✅ JaC walker syntax fixed
+[INFO] 🏗️  Step 5: Running Django commands with fixed dependencies...
+[INFO] Testing Django import...
+✅ Django import successful - Version: 5.2.8
+✅ Redis import successful
+✅ Celery import successful
+✅ All critical dependencies working!
+[INFO] Running Django management commands...
+[WARNING] ⚠️  No new migrations needed
+[WARNING] ⚠️  Migration issues (may be normal for development)
+[INFO] 📝 Note: JaC files should be compiled manually when jaclang is installed:
+[INFO]    jac build jac_layer/main.jac
+[INFO]    jac build jac_layer/walkers/<walker_name>.jac
+[INFO] ✅ JaC syntax has been fixed and files are ready for compilation
+[INFO] 🎨 Step 6: Fixing frontend TypeScript compilation errors...
+[INFO] Installing/updating TypeScript dependencies...
+npm warn using --force Recommended protections disabled.
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-scripts@5.0.1
+npm warn Found: typescript@5.9.3
+npm warn node_modules/typescript
+npm warn   dev typescript@"^5.0.0" from the root project
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional typescript@"^3.2.1 || ^4" from react-scripts@5.0.1
+npm warn node_modules/react-scripts
+npm warn   react-scripts@"5.0.1" from the root project
+npm warn
+npm warn Conflicting peer dependency: typescript@4.9.5
+npm warn node_modules/typescript
+npm warn   peerOptional typescript@"^3.2.1 || ^4" from react-scripts@5.0.1
+npm warn   node_modules/react-scripts
+npm warn     react-scripts@"5.0.1" from the root project
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 1235 packages in 6m
+
+changed 1 package in 6s
+
+up to date in 3s
+[INFO] Verifying existing service files...
+[SUCCESS] ✅ api.ts already exists with comprehensive functionality
+[SUCCESS] ✅ geminiService.ts already exists with comprehensive functionality
+[SUCCESS] ✅ openaiService.ts already exists with comprehensive functionality
+[SUCCESS] ✅ Frontend TypeScript fixes applied
+[INFO] Testing frontend compilation...
+[SUCCESS] ✅ Frontend compilation successful
+[INFO] 📝 Step 7: Creating startup scripts...
+[SUCCESS] ✅ Startup scripts ready
+[INFO] 🧪 Step 8: Final system verification...
+✅ All core Python modules available
+[INFO] Final system status:
+✅ Python dependencies: Installed
+✅ Environment variables: Fixed and loaded
+✅ JaC walker syntax: Fixed
+✅ Django setup: Completed
+✅ Frontend TypeScript: Fixed
+✅ Startup scripts: Ready
+[SUCCESS] 🎉 Complete Setup with All Fixes Finished Successfully!
+
+📋 Setup Summary:
+✅ Python dependencies installed (Django, Celery, Redis, etc.)
+✅ Environment variables properly formatted and loaded
+✅ JaC walker syntax corrected (root entry fixes)
+✅ Frontend TypeScript compilation errors fixed
+✅ Django management commands executed
+✅ Startup scripts created and configured
+
+🚀 NEXT STEPS:
+Open 4 terminal windows and run these commands:
+
+Terminal 1 - Backend:
+  cd /home/cavin/projects/Jeseci-Smart-Learning-Platform
+  ./start_backend.sh
+
+Terminal 2 - Celery Worker:
+  cd /home/cavin/projects/Jeseci-Smart-Learning-Platform
+  ./start_celery.sh
+
+Terminal 3 - Frontend:
+  cd /home/cavin/projects/Jeseci-Smart-Learning-Platform
+  ./start_frontend.sh
+
+🔗 Access Points:
+• Frontend: http://localhost:3000
+• Backend API: http://localhost:8001/api/
+• Admin Panel: http://localhost:8001/admin/
+• WebSocket: ws://localhost:8001/ws/chat/
+
+🔍 If you encounter any issues:
+• Check that Redis is running: sudo systemctl status redis
+• Ensure virtual environment is activated
+• JaC walkers have fallback execution if compilation fails
+• React development server handles TypeScript warnings
+
+🎉 Your Multi-Agent Learning Platform is ready with all fixes applied! 🚀
